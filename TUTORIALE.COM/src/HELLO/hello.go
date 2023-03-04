@@ -2,11 +2,16 @@ package main
 
 import (
 	"fmt"
-
+	"log"
 	"tutoriale.com/greetings"
 	
 )
 
 func main() {
-	fmt.Println(greetings.Powitanie("Sławomir"))
+	
+	message,err := greetings.Powitanie("Sławeczek")
+	if err != nil{
+		log.Fatal(err)
+	}
+	fmt.Println(message)
 }
